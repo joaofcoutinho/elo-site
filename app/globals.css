@@ -1,26 +1,164 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Brand Colors — Elo e-Health */
+  --color-brand-blue: #0070B3;
+  --color-brand-blue-hover: #005A92;
+  --color-brand-dark: #003A6B;
+  --color-brand-darker: #002D5A;
+  --color-brand-light: #EEF5FB;
+  --color-brand-lighter: #F7FAFD;
+  --color-brand-accent: #99C1DD;
+  --color-text-dark: #1A2E44;
+  --color-text-body: #4A5568;
+  --color-text-muted: #878787;
+
+  /* Typography */
+  --font-heading: var(--font-plus-jakarta);
+  --font-body: var(--font-inter);
+  --font-mono: var(--font-jetbrains-mono);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #FFFFFF;
+  color: #1A2E44;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-plus-jakarta), system-ui, sans-serif;
+}
+
+/* Skip to content */
+.skip-to-content {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #0070B3;
+  color: #FFFFFF;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-weight: 600;
+  z-index: 9999;
+  transition: top 0.2s;
+}
+.skip-to-content:focus {
+  top: 0;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #F7FAFD; }
+::-webkit-scrollbar-thumb { background: #99C1DD; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #0070B3; }
+
+/* Marquee */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Card on light bg */
+.light-card {
+  background: #FFFFFF;
+  border: 1px solid #E2EDF5;
+  box-shadow: 0 2px 12px rgba(0, 112, 179, 0.06);
+}
+.light-card:hover {
+  box-shadow: 0 8px 30px rgba(0, 112, 179, 0.12);
+  border-color: #99C1DD;
+}
+
+/* Glass card (dark sections) */
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Focus visible */
+*:focus-visible {
+  outline: 2px solid #0070B3;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Divider accent */
+.divider-accent {
+  background: linear-gradient(to right, #99C1DD, #0070B3, #99C1DD);
+}
+
+/* ── Hero animations ── */
+
+/* Floating particles */
+@keyframes floatUp {
+  0%   { transform: translateY(0) scale(1);   opacity: 0; }
+  10%  { opacity: 0.6; }
+  90%  { opacity: 0.3; }
+  100% { transform: translateY(-100vh) scale(0.5); opacity: 0; }
+}
+.hero-particle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: floatUp linear infinite;
+}
+
+/* Radar / sonar rings */
+@keyframes radarRing {
+  0%   { transform: scale(0.3); opacity: 0.5; }
+  100% { transform: scale(3);   opacity: 0; }
+}
+.radar-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(153, 193, 221, 0.3);
+  animation: radarRing ease-out infinite;
+  pointer-events: none;
+}
+
+/* Scan line sweep */
+@keyframes scanLine {
+  0%   { top: 0%;   opacity: 0; }
+  3%   { opacity: 1; }
+  97%  { opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
+.hero-scan-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent 0%, rgba(0,112,179,0.4) 30%, rgba(153,193,221,0.7) 50%, rgba(0,112,179,0.4) 70%, transparent 100%);
+  box-shadow: 0 0 12px 2px rgba(153,193,221,0.3);
+  animation: scanLine 6s linear infinite;
+  pointer-events: none;
+}
+
+/* Cursor blink */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+.cursor-blink {
+  display: inline-block;
+  width: 3px;
+  height: 0.85em;
+  background: #7DD3F8;
+  border-radius: 2px;
+  margin-left: 4px;
+  vertical-align: middle;
+  animation: blink 1s step-end 6;
 }
