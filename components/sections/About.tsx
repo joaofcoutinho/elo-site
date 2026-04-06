@@ -64,8 +64,8 @@ export function About() {
                   <div className="w-20 h-20 rounded-full bg-[#0070B3]/10 border border-[#0070B3]/20 flex items-center justify-center mx-auto mb-4">
                     <span className="text-[#0070B3] text-3xl font-bold font-[var(--font-plus-jakarta)]">E</span>
                   </div>
-                  <p className="text-[#878787] text-sm">Substitua por foto da equipe</p>
-                  <p className="text-[#878787]/60 text-xs mt-1">800×600 WebP</p>
+                  <p className="text-[#878787] text-sm">Aguardo por video/foto</p>
+                  <p className="text-[#878787]/60 text-xs mt-1">800×600</p>
                 </div>
               </div>
 
