@@ -12,7 +12,7 @@ interface ServiceCardProps {
   title: string;
   description: string;
   href: string;
-  image?: string;
+  image?: string | null;
 }
 
 function ServiceCard({ icon, title, description, href, image }: ServiceCardProps) {
