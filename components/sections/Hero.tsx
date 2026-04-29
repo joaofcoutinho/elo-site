@@ -3,9 +3,9 @@ import { Button } from "@/components/ui/Button";
 import { WHATSAPP_MESSAGE } from "@/lib/constants";
 
 const BADGES = [
-  { icon: Clock,     label: "24h Disponível"       },
-  { icon: BarChart2, label: "+309K Exames Laudados" },
-  { icon: Shield,    label: "LGPD Compliant"        },
+  { icon: Clock,     label: "Operação telerradiológica 24h" },
+  { icon: BarChart2, label: "Presente em 10 Estados"        },
+  { icon: Shield,    label: "Serviços ponta a ponta"        },
 ];
 
 export function Hero() {
@@ -62,7 +62,7 @@ export function Hero() {
         <div className="flex justify-center mb-5">
           <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-widest bg-[#0070B3]/20 text-[#7DD3F8] border border-[#0070B3]/30 backdrop-blur-sm">
             <span className="w-1.5 h-1.5 rounded-full bg-[#7DD3F8]" />
-            Telerradiologia de excelência
+            O hub de soluções para operações de saúde
           </span>
         </div>
 
@@ -83,8 +83,8 @@ export function Hero() {
 
         {/* Subtitle */}
         <p className="text-sm sm:text-base text-white/70 leading-relaxed mb-8 max-w-lg mx-auto">
-          Reduza custos, elimine filas e garanta diagnósticos precisos com a
-          maior empresa de telerradiologia do Espírito Santo.
+          A Elo e-Health integra telerradiologia, tecnologia e soluções para
+          transformar a eficiência diagnóstica do seu serviço de saúde.
         </p>
 
         {/* CTAs */}

@@ -33,8 +33,9 @@ export function CtaFinal() {
 
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-5 text-white font-[var(--font-plus-jakarta)]">
-          Pronto para modernizar seu{" "}
-          <span className="text-[#99C1DD]">centro de diagnóstico</span>?
+          Eleve o seu{" "}
+          <span className="text-[#99C1DD]">centro de diagnóstico</span>{" "}
+          com a Elo e-Health.
         </h2>
 
         <p className="text-white/75 text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
@@ -57,7 +58,7 @@ export function CtaFinal() {
             target="_blank"
             rel="noopener noreferrer"
             size="lg"
-            className="w-full sm:w-auto bg-white text-[#003A6B] hover:bg-[#EEF5FB] shadow-xl"
+            className="w-full sm:w-auto bg-[#25D366] hover:bg-[#1DB954] text-white shadow-xl border-0"
             aria-label="Chamar a Elo e-Health no WhatsApp"
           >
             <MessageCircle size={18} />

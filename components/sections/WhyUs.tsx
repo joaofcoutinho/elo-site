@@ -1,8 +1,8 @@
-import { MonitorCheck, Wallet, Headphones } from "lucide-react";
+import { Plug, Users2, TrendingDown, Award } from "lucide-react";
 import { SectionTag } from "@/components/ui/SectionTag";
 import { WHY_US } from "@/lib/constants";
 
-const ICONS: Record<string, React.ElementType> = { MonitorCheck, Wallet, Headphones };
+const ICONS: Record<string, React.ElementType> = { Plug, Users2, TrendingDown, Award };
 
 export function WhyUs() {
   return (
@@ -17,11 +17,11 @@ export function WhyUs() {
             Por que nos contratar?
           </h2>
           <p className="text-[#878787] text-lg max-w-2xl mx-auto">
-            Foque em fazer os exames — deixe que a Elo te entregue os laudos
+            Parceiro estratégico com uma equipe que conhece sua operação.
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {WHY_US.map((item) => {
             const Icon = ICONS[item.icon];
             return (

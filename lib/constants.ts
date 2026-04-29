@@ -9,11 +9,24 @@ export const NAV_LINKS = [
     href: "/servicos",
     children: [
       {
-        group: "Serviços",
+        group: "Diagnóstico",
         items: [
           { label: "Elo Telelaudo", href: "/servicos/elo-telelaudo", description: "Laudos 24/7 de RM e TC" },
-          { label: "Elo Consult", href: "/servicos/elo-consult", description: "Consultoria e gestão da qualidade" },
-          { label: "Data Business", href: "/servicos/data-business", description: "Gestão de dados e insights" },
+          { label: "Telecomando", href: "/servicos/telecomando", description: "Operação remota de equipamentos" },
+        ],
+      },
+      {
+        group: "Consultoria & Pessoas",
+        items: [
+          { label: "Elo Consult", href: "/servicos/elo-consult", description: "Processos, dados e estratégia" },
+          { label: "Elo People", href: "/servicos/people", description: "Gestão e estrutura de pessoas" },
+        ],
+      },
+      {
+        group: "Tecnologia & Educação",
+        items: [
+          { label: "Elo Tech & System", href: "/servicos/elo-tech", description: "PACS/RIS com IA integrada" },
+          { label: "Elo Education", href: "/servicos/elo-education", description: "Formação para profissionais de saúde" },
         ],
       },
     ],
@@ -34,17 +47,16 @@ export const CONTACT = {
 
 export const METRICS = [
   {
-    value: 6,
-    prefix: "+",
-    label: "Hospitais atendidos",
-    description: "Integração com operações simplificadas",
+    value: 10,
+    label: "Presença em Estados",
+    description: "Operamos nacionalmente",
     icon: "Building2",
   },
   {
     value: 85,
     suffix: "%",
     label: "Aumento na eficiência",
-    description: "Atendendo os mais rígidos SLAs",
+    description: "Prazos rigorosos de entrega",
     icon: "TrendingUp",
   },
   {
@@ -55,11 +67,10 @@ export const METRICS = [
     icon: "ThumbsUp",
   },
   {
-    value: 309,
+    value: 15,
     prefix: "+",
-    suffix: "K",
-    label: "Exames laudados",
-    description: "Realizados em 2023",
+    label: "Hospitais atendidos",
+    description: "Telerradiologia com excelência",
     icon: "FileCheck",
   },
 ];
@@ -70,42 +81,69 @@ export const SERVICES = [
     title: "Elo Telelaudo",
     description: "Laudos 24/7 de RM e TC em todas as subespecialidades, com entrega ágil e alta precisão diagnóstica.",
     href: "/servicos/elo-telelaudo",
-    image: "https://telemedicinamorsch.com.br/wp-content/uploads/2018/10/telelaudo.jpg",
+    image: null,
+  },
+  {
+    icon: "Monitor",
+    title: "Telecomando",
+    description: "Técnicos especializados operam remotamente seus equipamentos de RM e TC com protocolos otimizados.",
+    href: "/servicos/telecomando",
+    image: null,
   },
   {
     icon: "BarChart2",
     title: "Elo Consult",
-    description: "Consultoria especializada em gestão da qualidade, processos diagnósticos e certificações ISO, ONA e PADI.",
+    description: "Consultoria que atua dentro da sua operação conectando dados, processos e estratégia para transformar resultados.",
     href: "/servicos/elo-consult",
-    image: "https://star.med.br/wp-content/uploads/2023/11/radiologista-em-duvida-sobre-o-diagnostico.jpg",
+    image: null,
   },
   {
-    icon: "Database",
-    title: "Data Business",
-    description: "Gestão de dados clínicos e insights preditivos para decisões mais eficientes e rentáveis.",
-    href: "/servicos/data-business",
-    image: "https://fcamara.com/blog/wp-content/uploads/2024/06/Saude-Health-Data-Analytics-fcamara-1024x598.webp",
+    icon: "Users",
+    title: "Elo People",
+    description: "Estrutura de pessoas para quem precisa de performance real — liderança, cultura e operação integradas.",
+    href: "/servicos/people",
+    image: null,
+  },
+  {
+    icon: "Cpu",
+    title: "Elo Tech & System",
+    description: "O sistema completo para sua clínica: PACS/RIS próprio com IA integrada e acesso em tempo real.",
+    href: "/servicos/elo-tech",
+    image: null,
+  },
+  {
+    icon: "GraduationCap",
+    title: "Elo Education",
+    description: "Formação prática para profissionais da saúde que querem crescer com clareza estratégica e liderança.",
+    href: "/servicos/elo-education",
+    image: null,
   },
 ];
 
 export const WHY_US = [
   {
-    icon: "MonitorCheck",
-    title: "Tecnologia de ponta",
+    icon: "Plug",
+    title: "Integração sem fricção",
     description:
-      "Monitores LG certificados pela ANVISA para visualização dos exames — mais precisão.",
+      "A Elo e-Health realiza o diagnóstico de forma personalizada e adaptada para sua realidade. Nenhuma troca de equipamento é necessária.",
   },
   {
-    icon: "Wallet",
-    title: "Soluções econômicas",
+    icon: "Users2",
+    title: "Equipe especializada própria",
     description:
-      "Plataforma web (PACS ou PACS/RIS) e armazenamento em nuvem — mais eficiente, menor custo.",
+      "Corpo clínico, técnicos e suporte próprio com protocolos rigorosos seguidos do início ao fim.",
   },
   {
-    icon: "Headphones",
-    title: "Suporte 24/7",
+    icon: "TrendingDown",
+    title: "Redução real de custos",
     description:
-      "Médicos sempre disponíveis para atender sua demanda diária, urgente ou excedente.",
+      "Menos ociosidade, mesma estrutura local, mais exames por turno.",
+  },
+  {
+    icon: "Award",
+    title: "Qualidade mensurável",
+    description:
+      "Imagens mais nítidas, laudos mais assertivos, mais pacientes satisfeitos.",
   },
 ];
 
@@ -150,8 +188,11 @@ export const FOOTER_LINKS = [
     title: "Serviços",
     links: [
       { label: "Elo Telelaudo", href: "/servicos/elo-telelaudo" },
+      { label: "Telecomando", href: "/servicos/telecomando" },
       { label: "Elo Consult", href: "/servicos/elo-consult" },
-      { label: "Data Business", href: "/servicos/data-business" },
+      { label: "Elo People", href: "/servicos/people" },
+      { label: "Elo Tech & System", href: "/servicos/elo-tech" },
+      { label: "Elo Education", href: "/servicos/elo-education" },
     ],
   },
 ];

@@ -1,10 +1,10 @@
 import Image from "next/image";
-import { FileText, BarChart2, Database, ArrowRight } from "lucide-react";
+import { FileText, BarChart2, Database, ArrowRight, Monitor, Users, Cpu, GraduationCap } from "lucide-react";
 import { SectionTag } from "@/components/ui/SectionTag";
 import { SERVICES } from "@/lib/constants";
 
 const ICONS: Record<string, React.ElementType> = {
-  FileText, BarChart2, Database,
+  FileText, BarChart2, Database, Monitor, Users, Cpu, GraduationCap,
 };
 
 interface ServiceCardProps {
@@ -79,7 +79,7 @@ export function Services() {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {SERVICES.map((s) => (
             <ServiceCard key={s.title} {...s} />
           ))}

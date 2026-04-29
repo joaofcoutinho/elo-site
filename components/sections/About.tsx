@@ -4,9 +4,9 @@ import { Button } from "@/components/ui/Button";
 
 const highlights = [
   "Referência em telerradiologia no Espírito Santo",
-  "Equipe de radiologistas especializados",
-  "Tecnologia PACS/RIS de última geração",
-  "Conformidade total com LGPD e CFM",
+  "Equipe própria de médicos especialistas/subespecialistas",
+  "Tecnologia PACs/RIS de última geração",
+  "Processos em conformidade total com a LGPD",
 ];
 
 export function About() {
@@ -19,18 +19,21 @@ export function About() {
           <div className="lg:col-span-3">
             <SectionTag className="mb-5">Sobre nós</SectionTag>
 
-            <h2 className="text-3xl sm:text-4xl font-bold leading-tight mb-6 text-[#003A6B] font-[var(--font-plus-jakarta)]">
+            <h2 className="text-3xl sm:text-4xl font-bold leading-tight mb-3 text-[#003A6B] font-[var(--font-plus-jakarta)]">
               Conheça a{" "}
               <span className="text-[#0070B3]">Elo e-Health</span>
             </h2>
 
+            <p className="text-[#0070B3] font-medium mb-5">
+              Comprometidos com a excelência em serviços.
+            </p>
+
             <p className="text-[#4A5568] text-lg leading-relaxed mb-8">
-              Fundada com a missão de proporcionar diagnósticos de excelência, a
-              Elo e-Health é referência em telerradiologia para clínicas de médio
-              e pequeno portes e hospitais. Fornecemos laudos médicos de qualidade
-              e de forma ágil, dando suporte aos nossos parceiros para atenderem
-              melhor seus pacientes, reduzindo custos e contribuindo no crescimento
-              da empresa.
+              A Elo e-Health foi fundada com a missão de proporcionar diagnósticos
+              de excelência através de serviços de telerradiologia, consultoria e
+              gestão para hospitais, clínicas pequenas e médias. Desde a nossa
+              criação, temos nos empenhado em fornecer resultados médicos precisos
+              e rápidos.
             </p>
 
             <ul className="space-y-3 mb-10" role="list">
@@ -45,6 +48,29 @@ export function About() {
                 </li>
               ))}
             </ul>
+
+            {/* Missão / Visão / Valores */}
+            <div className="grid sm:grid-cols-3 gap-4 mb-10">
+              {[
+                {
+                  label: "Missão",
+                  text: "Proporcionar diagnósticos rápidos, precisos e acessíveis, contribuindo para a melhoria da qualidade do atendimento em saúde.",
+                },
+                {
+                  label: "Visão",
+                  text: "Ser a referência em serviços de telerradiologia no Brasil, reconhecida pela excelência e inovação.",
+                },
+                {
+                  label: "Valores",
+                  text: "Inovação, qualidade, agilidade, segurança e melhoria contínua são os pilares que sustentam nossa atuação.",
+                },
+              ].map(({ label, text }) => (
+                <div key={label} className="rounded-2xl border border-[#E2EDF5] bg-[#F7FAFD] p-4">
+                  <p className="text-[#0070B3] text-xs font-bold uppercase tracking-widest mb-2">{label}</p>
+                  <p className="text-[#4A5568] text-xs leading-relaxed">{text}</p>
+                </div>
+              ))}
+            </div>
 
             <Button href="/sobre" variant="outline" size="md" aria-label="Saiba mais sobre a Elo e-Health">
               Saiba mais
