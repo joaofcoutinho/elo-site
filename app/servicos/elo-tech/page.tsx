@@ -138,7 +138,7 @@ export default function EloTechPage() {
                 Elo System é operação integrada
               </h2>
               <p className="text-[#878787] text-lg max-w-2xl mx-auto">
-                Funcionalidades flexíveis que cobrem do primeiro contato até a última entrega.
+                Funcionalidades flexíveis que cobrem do agendamento ao faturamento, do laudo ao financeiro.
               </p>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -160,30 +160,52 @@ export default function EloTechPage() {
                   </ul>
                 </div>
               ))}
+
+              {/* CTA card — ocupa o 6º espaço do grid */}
+              <div className="rounded-3xl p-6 flex flex-col items-start justify-between gap-4"
+                style={{ background: "linear-gradient(135deg, #003A6B 0%, #0070B3 100%)" }}>
+                <div>
+                  <p className="text-white font-bold text-sm font-[var(--font-plus-jakarta)] mb-2">
+                    Quer ver o sistema em ação?
+                  </p>
+                  <p className="text-white/70 text-xs leading-relaxed">
+                    Solicite uma demonstração e conheça tudo que o Elo System pode fazer pela sua clínica.
+                  </p>
+                </div>
+                <Button href={WHATSAPP_MESSAGE} target="_blank" rel="noopener noreferrer" size="sm"
+                  className="bg-white text-[#003A6B] hover:bg-white/90 border-0 shadow-md">
+                  <MessageCircle size={14} />
+                  Solicitar demonstração
+                </Button>
+              </div>
             </div>
           </div>
         </section>
 
         {/* IA */}
-        <section aria-label="Inteligência Artificial" className="py-24 bg-[#EEF5FB]">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section aria-label="Inteligência Artificial" className="py-24 relative overflow-hidden"
+          style={{ background: "linear-gradient(160deg, #001E3C 0%, #002D5A 40%, #003A6B 70%, #004080 100%)" }}>
+          <div className="absolute inset-0 opacity-[0.035] pointer-events-none" aria-hidden="true"
+            style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.6) 1px, transparent 1px)", backgroundSize: "50px 50px" }} />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-[#0070B3]/15 rounded-full blur-[140px] pointer-events-none" aria-hidden="true" />
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-14">
-              <SectionTag className="mb-4">Inteligência Artificial</SectionTag>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#003A6B] mb-4 font-[var(--font-plus-jakarta)]">
+              <SectionTag dark className="mb-4">Inteligência Artificial</SectionTag>
+              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 font-[var(--font-plus-jakarta)]">
                 A IA que trabalha com a sua equipe, não no lugar dela
               </h2>
-              <p className="text-[#878787] text-lg max-w-2xl mx-auto">
-                Elena IA integrada ao fluxo de trabalho do radiologista.
+              <p className="text-white/60 text-lg max-w-2xl mx-auto">
+                IA integrada ao fluxo de trabalho do radiologista.
               </p>
             </div>
             <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
               {AI_FEATURES.map(({ icon: Icon, title, description }) => (
-                <div key={title} className="bg-white rounded-3xl border border-[#E2EDF5] p-8 shadow-sm">
-                  <div className="w-12 h-12 rounded-xl bg-[#0070B3]/10 border border-[#0070B3]/15 flex items-center justify-center mb-4">
-                    <Icon size={22} className="text-[#0070B3]" aria-hidden="true" />
+                <div key={title} className="bg-white/5 backdrop-blur-sm rounded-3xl border border-white/10 p-8">
+                  <div className="w-12 h-12 rounded-xl bg-[#0070B3]/30 border border-[#0070B3]/30 flex items-center justify-center mb-4">
+                    <Icon size={22} className="text-[#7DD3F8]" aria-hidden="true" />
                   </div>
-                  <h3 className="text-[#003A6B] font-bold mb-3 font-[var(--font-plus-jakarta)]">{title}</h3>
-                  <p className="text-[#878787] text-sm leading-relaxed">{description}</p>
+                  <h3 className="text-white font-bold mb-3 font-[var(--font-plus-jakarta)]">{title}</h3>
+                  <p className="text-white/60 text-sm leading-relaxed">{description}</p>
                 </div>
               ))}
             </div>

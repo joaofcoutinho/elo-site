@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { CurriculumForm } from "./CurriculumForm";
-import { Heart, Stethoscope, TrendingUp, Users, MessageCircle, MapPin, Clock, ChevronRight } from "lucide-react";
+import { Heart, Stethoscope, TrendingUp, Users } from "lucide-react";
 import { WHATSAPP_MESSAGE } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -36,32 +36,6 @@ const BENEFITS = [
   },
 ];
 
-const VAGAS = [
-  {
-    titulo: "Médico Radiologista",
-    tipo: "Pessoa Jurídica",
-    regime: "Remoto",
-    descricao: "Emissão de laudos de RM e TC 24/7 com suporte de plataforma PACS/RIS de última geração.",
-  },
-  {
-    titulo: "Técnico em Radiologia",
-    tipo: "CLT",
-    regime: "Presencial",
-    descricao: "Execução de exames de imagem seguindo protocolos otimizados e rigorosos padrões de qualidade.",
-  },
-  {
-    titulo: "Comercial / Relacionamento",
-    tipo: "CLT",
-    regime: "Híbrido",
-    descricao: "Prospecção e gestão de contas em clínicas e hospitais, apresentando soluções Elo e-Health.",
-  },
-  {
-    titulo: "Tecnologia da Informação",
-    tipo: "CLT / PJ",
-    regime: "Remoto",
-    descricao: "Desenvolvimento e manutenção de sistemas internos, integrações PACS/RIS e infraestrutura de TI.",
-  },
-];
 
 export default function TrabalheConoscoPage() {
   return (
@@ -121,67 +95,6 @@ export default function TrabalheConoscoPage() {
           </div>
         </div>
 
-        {/* Vagas abertas */}
-        <div className="bg-white py-16 border-b border-[#E2EDF5]">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-10">
-              <p className="text-[#0070B3] text-xs font-bold uppercase tracking-widest mb-2">Oportunidades</p>
-              <h2 className="text-2xl font-bold text-[#003A6B] font-[var(--font-plus-jakarta)]">
-                Vagas abertas
-              </h2>
-              <p className="text-[#878787] text-sm mt-2">
-                Não encontrou sua área? Envie seu currículo e entraremos em contato.
-              </p>
-            </div>
-
-            <div className="space-y-4 mb-10">
-              {VAGAS.map((vaga) => (
-                <div
-                  key={vaga.titulo}
-                  className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-[#F7FAFE] rounded-2xl border border-[#E2EDF5] px-6 py-5 hover:border-[#0070B3]/40 hover:shadow-sm transition-all"
-                >
-                  <div className="flex-1">
-                    <h3 className="font-bold text-[#003A6B] font-[var(--font-plus-jakarta)] mb-1">
-                      {vaga.titulo}
-                    </h3>
-                    <p className="text-xs text-[#4A5568] leading-relaxed mb-2">{vaga.descricao}</p>
-                    <div className="flex flex-wrap gap-2">
-                      <span className="inline-flex items-center gap-1 text-xs text-[#0070B3] bg-[#EEF5FB] px-2.5 py-1 rounded-full">
-                        <Clock size={10} />
-                        {vaga.tipo}
-                      </span>
-                      <span className="inline-flex items-center gap-1 text-xs text-[#0070B3] bg-[#EEF5FB] px-2.5 py-1 rounded-full">
-                        <MapPin size={10} />
-                        {vaga.regime}
-                      </span>
-                    </div>
-                  </div>
-                  <a
-                    href="#curriculo"
-                    className="inline-flex items-center gap-1 text-sm font-semibold text-[#0070B3] hover:text-[#005A92] transition-colors flex-shrink-0"
-                  >
-                    Candidatar-se
-                    <ChevronRight size={14} />
-                  </a>
-                </div>
-              ))}
-            </div>
-
-            {/* WhatsApp CTA */}
-            <div className="text-center">
-              <p className="text-sm text-[#878787] mb-4">Prefere falar com a gente diretamente?</p>
-              <a
-                href={WHATSAPP_MESSAGE}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#25D366] hover:bg-[#1DB954] text-white font-semibold text-sm transition-colors shadow-md shadow-[#25D366]/25"
-              >
-                <MessageCircle size={16} />
-                Falar pelo WhatsApp
-              </a>
-            </div>
-          </div>
-        </div>
 
         {/* Form */}
         <div id="curriculo" className="bg-[#F7FAFE] py-16">

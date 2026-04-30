@@ -108,10 +108,14 @@ export default function EloConsultPage() {
                   Mergulhamos na rotina, entendemos fluxos, identificamos gargalos e organizamos
                   a operação com base em dados e prática real.
                 </p>
-                <p className="text-[#4A5568] leading-relaxed">
+                <p className="text-[#4A5568] leading-relaxed mb-8">
                   Desenvolvemos um modelo que funcione no dia a dia de forma personalizada para
                   otimizar de forma estratégica e sistêmica a sua operação.
                 </p>
+                <Button href={WHATSAPP_MESSAGE} target="_blank" rel="noopener noreferrer" size="md">
+                  <MessageCircle size={16} />
+                  Falar com um consultor
+                </Button>
               </div>
 
               <div className="grid grid-cols-2 gap-4">
@@ -138,12 +142,16 @@ export default function EloConsultPage() {
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {PILLARS.map(({ icon: Icon, title, description }) => (
-                <div key={title} className="bg-white rounded-3xl border border-[#E2EDF5] p-8 flex flex-col gap-4 shadow-sm group hover:-translate-y-1 transition-all duration-300">
-                  <div className="w-12 h-12 rounded-xl bg-[#0070B3]/10 border border-[#0070B3]/15 flex items-center justify-center group-hover:bg-[#0070B3] transition-colors duration-300">
-                    <Icon size={22} className="text-[#0070B3] group-hover:text-white transition-colors duration-300" aria-hidden="true" />
+                <div key={title} className="bg-white rounded-3xl border border-[#E2EDF5] overflow-hidden flex flex-col shadow-sm group hover:-translate-y-1 transition-all duration-300">
+                  {/* IMAGE PLACEHOLDER — substituir por foto real */}
+                  <div className="h-40 bg-[#EEF5FB] border-b border-[#E2EDF5] flex flex-col items-center justify-center gap-2">
+                    <span className="text-[#0070B3]/30 text-3xl">🖼</span>
+                    <span className="text-[#0070B3]/40 text-xs font-medium">Imagem — substituir</span>
                   </div>
-                  <h3 className="text-[#003A6B] font-bold font-[var(--font-plus-jakarta)]">{title}</h3>
-                  <p className="text-[#878787] text-sm leading-relaxed">{description}</p>
+                  <div className="p-6 flex flex-col gap-2">
+                    <h3 className="text-[#003A6B] font-bold text-sm font-[var(--font-plus-jakarta)]">{title}</h3>
+                    <p className="text-[#878787] text-xs leading-relaxed">{description}</p>
+                  </div>
                 </div>
               ))}
             </div>
@@ -159,9 +167,9 @@ export default function EloConsultPage() {
                 Certificações e qualidade
               </h2>
               <p className="text-[#4A5568] text-base leading-relaxed mb-10">
-                A Elo e-Health também atua em projetos de implantação e adequação para
-                certificações relevantes do setor, com foco em operadores de saúde que
-                buscam elevar seu padrão de qualidade e governança.
+                A Elo e-Health atua em projetos de implantação e adequação para certificações
+                relevantes do setor, com foco em operadores de saúde que buscam elevar
+                seu padrão de qualidade e governança.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 {CERTS.map((cert) => (

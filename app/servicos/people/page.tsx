@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, MessageCircle, Users, Target, Layers, Star, TrendingUp, Compass, Activity } from "lucide-react";
+import { ArrowRight, MessageCircle, Users, Target, Layers, Star, TrendingUp, Compass } from "lucide-react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { SectionTag } from "@/components/ui/SectionTag";
@@ -91,63 +91,11 @@ export default function EloPeoplePage() {
                 </div>
               </div>
 
-              {/* Card Sistema Elo People */}
+              {/* IMAGE PLACEHOLDER — substituir por foto real */}
               <div className="flex justify-center lg:justify-end">
-                <div className="w-full max-w-md rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm p-7 flex flex-col gap-5">
-
-                  {/* Header */}
-                  <p className="text-xs font-bold tracking-[0.18em] text-white/40 uppercase">
-                    Sistema Elo People
-                  </p>
-
-                  {/* Linha 1 de pilares */}
-                  <div className="grid grid-cols-3 gap-4">
-                    {([
-                      { icon: Users,      label: "Liderança" },
-                      { icon: Star,       label: "Cultura" },
-                      { icon: Layers,     label: "Processos" },
-                    ] as const).map(({ icon: Icon, label }) => (
-                      <div key={label} className="flex flex-col items-center gap-2 rounded-xl bg-white/5 border border-white/8 py-4 px-3">
-                        <Icon size={24} className="text-[#7DD3F8]" />
-                        <span className="text-white/70 text-xs font-medium text-center">{label}</span>
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Linha destacada — Sistema de performance */}
-                  <div className="flex items-center gap-3 rounded-xl px-5 py-4" style={{ background: "linear-gradient(90deg, #0070B3 0%, #004A8F 100%)" }}>
-                    <Activity size={18} className="text-white flex-shrink-0" />
-                    <span className="text-white text-sm font-semibold tracking-wide">Sistema de performance</span>
-                  </div>
-
-                  {/* Linha 2 de pilares */}
-                  <div className="grid grid-cols-3 gap-4">
-                    {([
-                      { icon: Compass,    label: "Comportamento" },
-                      { icon: TrendingUp, label: "Execução" },
-                      { icon: Target,     label: "Resultado" },
-                    ] as const).map(({ icon: Icon, label }) => (
-                      <div key={label} className="flex flex-col items-center gap-2 rounded-xl bg-white/5 border border-white/8 py-4 px-3">
-                        <Icon size={24} className="text-[#7DD3F8]" />
-                        <span className="text-white/70 text-xs font-medium text-center">{label}</span>
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Stats */}
-                  <div className="grid grid-cols-3 gap-3 pt-3 border-t border-white/8">
-                    {[
-                      { value: "7",    label: "linhas de solução" },
-                      { value: "360°", label: "visão organizacional" },
-                      { value: "1",    label: "parceiro integrado" },
-                    ].map(({ value, label }) => (
-                      <div key={label} className="flex flex-col items-center gap-1 text-center">
-                        <span className="text-white font-bold text-xl font-[var(--font-plus-jakarta)]">{value}</span>
-                        <span className="text-white/40 text-[10px] leading-tight">{label}</span>
-                      </div>
-                    ))}
-                  </div>
-
+                <div className="w-full max-w-md rounded-2xl border-2 border-dashed border-white/20 bg-white/5 flex flex-col items-center justify-center h-80 gap-3">
+                  <span className="text-white/30 text-4xl">🖼</span>
+                  <p className="text-white/30 text-sm font-medium">Imagem — substituir</p>
                 </div>
               </div>
 
@@ -189,20 +137,30 @@ export default function EloPeoplePage() {
         {/* Como atuamos */}
         <section aria-label="Como atuamos" className="py-24 bg-[#EEF5FB]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-14">
-              <SectionTag className="mb-4">Metodologia</SectionTag>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#003A6B] font-[var(--font-plus-jakarta)]">
-                Da análise à execução.
-              </h2>
-            </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {HOW.map((step) => (
-                <div key={step.n} className="bg-white rounded-3xl border border-[#E2EDF5] p-6 flex flex-col gap-4 shadow-sm">
-                  <span className="text-3xl font-bold text-[#E2EDF5] font-[var(--font-jetbrains-mono)]">{step.n}</span>
-                  <h3 className="text-[#003A6B] font-semibold font-[var(--font-plus-jakarta)]">{step.title}</h3>
-                  <p className="text-[#878787] text-sm leading-relaxed">{step.description}</p>
+            <div className="grid lg:grid-cols-2 gap-14 items-center">
+              <div>
+                <SectionTag className="mb-4">Metodologia</SectionTag>
+                <h2 className="text-3xl sm:text-4xl font-bold text-[#003A6B] mb-10 font-[var(--font-plus-jakarta)]">
+                  Da análise à execução.
+                </h2>
+                <div className="flex flex-col gap-6">
+                  {HOW.map((step) => (
+                    <div key={step.n} className="flex gap-5 items-start">
+                      <span className="text-3xl font-bold text-[#E2EDF5] font-[var(--font-jetbrains-mono)] leading-none flex-shrink-0 w-10">{step.n}</span>
+                      <div>
+                        <h3 className="text-[#003A6B] font-semibold mb-1 font-[var(--font-plus-jakarta)]">{step.title}</h3>
+                        <p className="text-[#878787] text-sm leading-relaxed">{step.description}</p>
+                      </div>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
+
+              {/* IMAGE PLACEHOLDER — substituir por foto real */}
+              <div className="rounded-2xl border-2 border-dashed border-[#0070B3]/25 bg-white flex flex-col items-center justify-center h-96 gap-3">
+                <span className="text-[#0070B3]/30 text-4xl">🖼</span>
+                <p className="text-[#0070B3]/40 text-sm font-medium">Imagem — substituir</p>
+              </div>
             </div>
           </div>
         </section>

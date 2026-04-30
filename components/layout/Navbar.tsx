@@ -138,6 +138,16 @@ export function Navbar() {
               {NAV_LINKS.map((item) => (
                 <DesktopDropdown key={item.href} item={item} />
               ))}
+              <li>
+                <Link
+                  href="https://calculadora.eloe-health.com.br/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 text-sm rounded-lg transition-all duration-200 text-[#4A5568] hover:text-[#003A6B] hover:bg-[#EEF5FB]"
+                >
+                  Calculadora de Impostos
+                </Link>
+              </li>
             </ul>
 
             {/* Desktop CTA */}
@@ -252,7 +262,16 @@ export function Navbar() {
           </ul>
         </nav>
 
-        <div className="px-6 pb-8 border-t border-[#E2EDF5] pt-6">
+        <div className="px-6 pb-8 border-t border-[#E2EDF5] pt-6 flex flex-col gap-3">
+          <Link
+            href="https://calculadora.eloe-health.com.br/"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setIsOpen(false)}
+            className="flex items-center justify-center w-full px-4 py-2.5 text-sm font-medium rounded-lg text-[#4A5568] hover:text-[#003A6B] hover:bg-[#EEF5FB] transition-all duration-200"
+          >
+            Calculadora de Impostos
+          </Link>
           <Button
             href={WHATSAPP_MESSAGE}
             target="_blank"

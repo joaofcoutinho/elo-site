@@ -158,7 +158,7 @@ export default function EloTelelaudoPage() {
                 {["24h Disponível", "100% Remoto", "Assinatura Digital", "LGPD Compliant"].map((tag) => (
                   <span
                     key={tag}
-                    className="px-3 py-1.5 rounded-full bg-white/8 border border-white/12 text-white/70 text-xs font-medium"
+                    className="px-3 py-1.5 rounded-full bg-white text-[#003A6B] text-xs font-semibold shadow-sm"
                   >
                     {tag}
                   </span>
@@ -217,6 +217,19 @@ export default function EloTelelaudoPage() {
                   </div>
                 </div>
               ))}
+
+              {/* CTA card — 6º slot do grid */}
+              <div className="rounded-3xl p-6 flex flex-col gap-4 justify-center"
+                style={{ background: "linear-gradient(135deg, #003A6B 0%, #0070B3 100%)" }}>
+                <p className="text-white text-sm font-semibold font-[var(--font-plus-jakarta)]">
+                  Pronto para laudos 24/7 na sua clínica?
+                </p>
+                <Button href={WHATSAPP_MESSAGE} target="_blank" rel="noopener noreferrer" size="sm"
+                  className="bg-white text-[#003A6B] hover:bg-white/90 border-0 shadow-md w-fit">
+                  <MessageCircle size={14} />
+                  Falar com especialista
+                </Button>
+              </div>
             </div>
 
             {/* SLA Table */}
@@ -285,31 +298,10 @@ export default function EloTelelaudoPage() {
                   ))}
                 </ul>
               </div>
-              <div className="light-card rounded-3xl p-8">
-                <div className="w-12 h-12 rounded-xl bg-[#0070B3]/10 border border-[#0070B3]/15 flex items-center justify-center mb-5">
-                  <CheckCircle2 size={22} className="text-[#0070B3]" aria-hidden="true" />
-                </div>
-                <h3 className="text-[#003A6B] font-bold text-xl mb-3 font-[var(--font-plus-jakarta)]">
-                  Como o Elo Telelaudo atua
-                </h3>
-                <p className="text-[#4A5568] text-sm leading-relaxed mb-6">
-                  O telelaudo elimina gargalos operacionais ao substituir a dependência de
-                  laudistas presenciais por uma operação 100% remota, escalável e disponível
-                  24 horas por dia — sem obras, sem contratações e sem equipamentos adicionais.
-                </p>
-                <div className="space-y-3">
-                  {[
-                    "Faturamento por volume — sem mensalidade fixa",
-                    "Implementação em dias, sem instalações físicas",
-                    "Escala de operação sem aumento de estrutura",
-                    "Cancele quando quiser, sem multa contratual",
-                  ].map((item) => (
-                    <div key={item} className="flex items-start gap-2.5">
-                      <CheckCircle2 size={16} className="text-[#0070B3] mt-0.5 flex-shrink-0" aria-hidden="true" />
-                      <span className="text-[#4A5568] text-sm">{item}</span>
-                    </div>
-                  ))}
-                </div>
+              {/* IMAGE PLACEHOLDER — substituir por foto real */}
+              <div className="rounded-3xl bg-white border-2 border-dashed border-[#0070B3]/25 flex flex-col items-center justify-center h-full min-h-72 gap-3">
+                <span className="text-[#0070B3]/30 text-4xl">🖼</span>
+                <p className="text-[#0070B3]/40 text-sm font-medium">Imagem — substituir</p>
               </div>
             </div>
           </div>
@@ -326,6 +318,31 @@ export default function EloTelelaudoPage() {
               <p className="text-[#878787] text-lg max-w-xl mx-auto">
                 Do exame ao laudo em 4 passos. Sem complexidade técnica para a sua operação.
               </p>
+            </div>
+
+            {/* Como o Telelaudo atua — destaque antes dos steps */}
+            <div className="rounded-3xl mb-10 p-8 grid lg:grid-cols-2 gap-8 items-center"
+              style={{ background: "linear-gradient(135deg, #003A6B 0%, #0070B3 100%)" }}>
+              <div>
+                <p className="text-[#7DD3F8] text-xs font-bold uppercase tracking-widest mb-3">Como o Elo Telelaudo atua</p>
+                <p className="text-white text-lg font-semibold font-[var(--font-plus-jakarta)] mb-3 leading-snug">
+                  O telelaudo elimina gargalos operacionais ao substituir a dependência de laudistas presenciais por uma operação 100% remota, escalável e disponível 24 horas por dia.
+                </p>
+                <p className="text-white/60 text-sm">Sem obras, sem contratações e sem equipamentos adicionais.</p>
+              </div>
+              <div className="grid grid-cols-2 gap-3">
+                {[
+                  "Faturamento por volume — sem mensalidade fixa",
+                  "Implementação em dias, sem instalações físicas",
+                  "Escala de operação sem aumento de estrutura",
+                  "Cancele quando quiser, sem multa contratual",
+                ].map((item) => (
+                  <div key={item} className="bg-white/10 rounded-2xl p-4 flex items-start gap-2.5">
+                    <CheckCircle2 size={15} className="text-[#7DD3F8] mt-0.5 flex-shrink-0" aria-hidden="true" />
+                    <span className="text-white/80 text-xs leading-relaxed">{item}</span>
+                  </div>
+                ))}
+              </div>
             </div>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">

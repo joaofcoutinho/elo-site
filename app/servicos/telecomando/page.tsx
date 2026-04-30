@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Monitor, ArrowRight, MessageCircle, TrendingUp, Package, BadgeCheck, Smile, Check, ArrowDown } from "lucide-react";
+import { Monitor, ArrowRight, MessageCircle, TrendingUp, Package, BadgeCheck, Smile, Check } from "lucide-react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { SectionTag } from "@/components/ui/SectionTag";
@@ -57,7 +57,7 @@ export default function TelecomandoPage() {
                   <span className="text-white/70">Telecomando</span>
                 </nav>
 
-                <SectionTag dark className="mb-5">Serviço</SectionTag>
+                <SectionTag dark className="mb-5">Elo Telecomando</SectionTag>
 
                 <h1 className="text-4xl sm:text-5xl font-bold leading-tight text-white mb-5 font-[var(--font-plus-jakarta)]">
                   Seus equipamentos de{" "}
@@ -71,9 +71,9 @@ export default function TelecomandoPage() {
                   a sua clínica ou hospital.
                 </p>
 
-                <div className="flex flex-wrap gap-3">
+                <div className="grid grid-cols-2 gap-2 max-w-sm">
                   {["Operação 24/7", "Sem troca de equipamento", "Reconvocação < 0,2%", "Protocolos otimizados"].map((tag) => (
-                    <span key={tag} className="px-3 py-1.5 rounded-full bg-white/8 border border-white/12 text-white/70 text-xs font-medium">{tag}</span>
+                    <span key={tag} className="px-3 py-1.5 rounded-full bg-white/8 border border-white/12 text-white/70 text-xs font-medium text-center">{tag}</span>
                   ))}
                 </div>
               </div>
@@ -115,14 +115,17 @@ export default function TelecomandoPage() {
 
                   {/* Stats */}
                   <div className="grid grid-cols-2 gap-3">
-                    <div className="rounded-xl bg-white/5 border border-white/8 p-4 text-center">
-                      <p className="text-white font-bold text-xl font-[var(--font-jetbrains-mono)] mb-1">&lt;0,2%</p>
-                      <p className="text-white/40 text-xs">Reconvocação</p>
-                    </div>
-                    <div className="rounded-xl bg-white/5 border border-white/8 p-4 text-center">
-                      <p className="text-white font-bold text-xl font-[var(--font-jetbrains-mono)] mb-1">+40%</p>
-                      <p className="text-white/40 text-xs">Capacidade de exames</p>
-                    </div>
+                    {[
+                      { value: "<0,2%", label: "Reconvocação" },
+                      { value: "+40%",  label: "Capacidade de exames" },
+                      { value: "24/7",  label: "Operação contínua" },
+                      { value: "Zero",  label: "Troca de equipamento" },
+                    ].map(({ value, label }) => (
+                      <div key={label} className="rounded-xl bg-white/5 border border-white/8 p-4 text-center">
+                        <p className="text-white font-bold text-xl font-[var(--font-jetbrains-mono)] mb-1">{value}</p>
+                        <p className="text-white/40 text-xs">{label}</p>
+                      </div>
+                    ))}
                   </div>
 
                 </div>
@@ -151,6 +154,7 @@ export default function TelecomandoPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-12">
               <SectionTag className="mb-4">O que você ganha</SectionTag>
+              <p className="text-[#0070B3] text-sm font-semibold uppercase tracking-widest mb-2">Elo Telecomando</p>
               <h2 className="text-3xl sm:text-4xl font-bold text-[#003A6B] font-[var(--font-plus-jakarta)]">
                 Benefícios diretos para a sua operação
               </h2>
@@ -229,29 +233,32 @@ export default function TelecomandoPage() {
               ))}
             </div>
 
-            <div className="flex justify-center mt-10">
-              <div className="w-8 h-8 rounded-full border border-[#E2EDF5] flex items-center justify-center">
-                <ArrowDown size={14} className="text-[#878787]" />
-              </div>
-            </div>
           </div>
         </section>
 
         {/* Como funciona */}
         <section aria-label="Como funciona" className="py-24 bg-[#EEF5FB]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-14">
+            <div className="mb-14">
               <SectionTag className="mb-4">Processo</SectionTag>
               <h2 className="text-3xl sm:text-4xl font-bold text-[#003A6B] font-[var(--font-plus-jakarta)]">Como funciona</h2>
             </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {HOW_IT_WORKS.map((step) => (
-                <div key={step.n} className="light-card rounded-3xl p-6 flex flex-col gap-4">
-                  <span className="text-3xl font-bold text-[#E2EDF5] font-[var(--font-jetbrains-mono)]">{step.n}</span>
-                  <h3 className="text-[#003A6B] font-semibold font-[var(--font-plus-jakarta)]">{step.title}</h3>
-                  <p className="text-[#878787] text-sm leading-relaxed">{step.description}</p>
-                </div>
-              ))}
+            <div className="grid lg:grid-cols-2 gap-10 items-center">
+              {/* IMAGE PLACEHOLDER — substituir por foto real do serviço */}
+              <div className="rounded-3xl bg-white border-2 border-dashed border-[#0070B3]/25 flex flex-col items-center justify-center h-80 gap-3">
+                <span className="text-[#0070B3]/30 text-4xl">🖼</span>
+                <p className="text-[#0070B3]/40 text-sm font-medium">Imagem — substituir</p>
+              </div>
+
+              <div className="grid grid-cols-2 gap-4">
+                {HOW_IT_WORKS.map((step) => (
+                  <div key={step.n} className="light-card rounded-3xl p-6 flex flex-col gap-4">
+                    <span className="text-3xl font-bold text-[#E2EDF5] font-[var(--font-jetbrains-mono)]">{step.n}</span>
+                    <h3 className="text-[#003A6B] font-semibold text-sm font-[var(--font-plus-jakarta)]">{step.title}</h3>
+                    <p className="text-[#878787] text-xs leading-relaxed">{step.description}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>

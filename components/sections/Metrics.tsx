@@ -1,11 +1,11 @@
 "use client";
 
-import { Building2, TrendingUp, ThumbsUp, FileCheck } from "lucide-react";
+import { MapPin, TrendingUp, ThumbsUp, Hospital } from "lucide-react";
 import { CountUp } from "@/components/ui/CountUp";
 import { METRICS } from "@/lib/constants";
 import { SectionTag } from "@/components/ui/SectionTag";
 
-const ICONS = { Building2, TrendingUp, ThumbsUp, FileCheck };
+const ICONS = { MapPin, TrendingUp, ThumbsUp, Hospital };
 type IconName = keyof typeof ICONS;
 
 export function Metrics() {

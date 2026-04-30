@@ -9,7 +9,7 @@ export const NAV_LINKS = [
     href: "/servicos",
     children: [
       {
-        group: "Diagnóstico",
+        group: "Radiologia e Diagnóstico por Imagem",
         items: [
           { label: "Elo Telelaudo", href: "/servicos/elo-telelaudo", description: "Laudos 24/7 de RM e TC" },
           { label: "Telecomando", href: "/servicos/telecomando", description: "Operação remota de equipamentos" },
@@ -50,7 +50,7 @@ export const METRICS = [
     value: 10,
     label: "Presença em Estados",
     description: "Operamos nacionalmente",
-    icon: "Building2",
+    icon: "MapPin",
   },
   {
     value: 85,
@@ -71,7 +71,7 @@ export const METRICS = [
     prefix: "+",
     label: "Hospitais atendidos",
     description: "Telerradiologia com excelência",
-    icon: "FileCheck",
+    icon: "Hospital",
   },
 ];
 

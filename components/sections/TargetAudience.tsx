@@ -42,15 +42,22 @@ export function TargetAudience() {
           {PROFILES.map(({ icon: Icon, title, description }) => (
             <div
               key={title}
-              className="bg-white rounded-3xl border border-[#E2EDF5] p-8 flex flex-col gap-4 shadow-sm group transition-all duration-300 hover:-translate-y-1 hover:border-[#0070B3]/30"
+              className="bg-white rounded-3xl border border-[#E2EDF5] overflow-hidden flex flex-col shadow-sm group transition-all duration-300 hover:-translate-y-1 hover:border-[#0070B3]/30"
             >
-              <div className="w-14 h-14 rounded-2xl bg-[#0070B3]/10 border border-[#0070B3]/15 flex items-center justify-center group-hover:bg-[#0070B3] transition-colors duration-300">
-                <Icon size={24} className="text-[#0070B3] group-hover:text-white transition-colors duration-300" aria-hidden="true" />
+              {/* IMAGE PLACEHOLDER — substituir por foto real */}
+              <div className="h-40 bg-[#EEF5FB] border-b border-[#E2EDF5] flex flex-col items-center justify-center gap-2">
+                <span className="text-[#0070B3]/30 text-3xl">🖼</span>
+                <span className="text-[#0070B3]/40 text-xs font-medium">Imagem — substituir</span>
               </div>
-              <h3 className="text-[#003A6B] font-bold text-base font-[var(--font-plus-jakarta)]">
-                {title}
-              </h3>
-              <p className="text-[#878787] text-sm leading-relaxed">{description}</p>
+              <div className="p-6 flex flex-col gap-3">
+                <div className="w-10 h-10 rounded-xl bg-[#0070B3]/10 border border-[#0070B3]/15 flex items-center justify-center group-hover:bg-[#0070B3] transition-colors duration-300">
+                  <Icon size={18} className="text-[#0070B3] group-hover:text-white transition-colors duration-300" aria-hidden="true" />
+                </div>
+                <h3 className="text-[#003A6B] font-bold text-base font-[var(--font-plus-jakarta)]">
+                  {title}
+                </h3>
+                <p className="text-[#878787] text-sm leading-relaxed">{description}</p>
+              </div>
             </div>
           ))}
         </div>
