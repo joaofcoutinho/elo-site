@@ -25,15 +25,21 @@ export function About() {
             </h2>
 
             <p className="text-[#0070B3] font-medium mb-5">
-              Comprometidos com a excelência em serviços.
+              Comprometidos com a excelência em serviços para hospitais e clínicas.
+            </p>
+
+            <p className="text-[#4A5568] text-lg leading-relaxed mb-5">
+              A Elo e-Health foi fundada com o propósito de aumentar a eficiência
+              das estruturas de atendimento à saúde, promovendo qualidade de vida
+              e desenvolvimento social.
             </p>
 
             <p className="text-[#4A5568] text-lg leading-relaxed mb-8">
-              A Elo e-Health foi fundada com a missão de proporcionar diagnósticos
-              de excelência através de serviços de telerradiologia, consultoria e
-              gestão para hospitais, clínicas pequenas e médias. Desde a nossa
-              criação, temos nos empenhado em fornecer resultados médicos precisos
-              e rápidos.
+              Inicialmente com soluções de diagnósticos de excelência através de
+              serviços de telerradiologia, mas ao perceber a necessidade de
+              profissionalização de operações de saúde, evoluiu para ser um hub
+              que oferece serviços de Tecnologia, Gestão e Educação que
+              transformam a realidade da sua operação de hospitais e clínicas.
             </p>
 
             <ul className="space-y-3 mb-10" role="list">

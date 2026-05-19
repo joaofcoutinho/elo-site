@@ -1,8 +1,8 @@
-import { Plug, Users2, TrendingDown, Award } from "lucide-react";
+import { Clock, Zap, Stethoscope, LineChart } from "lucide-react";
 import { SectionTag } from "@/components/ui/SectionTag";
 import { WHY_US } from "@/lib/constants";
 
-const ICONS: Record<string, React.ElementType> = { Plug, Users2, TrendingDown, Award };
+const ICONS: Record<string, React.ElementType> = { Clock, Zap, Stethoscope, LineChart };
 
 export function WhyUs() {
   return (

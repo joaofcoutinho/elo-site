@@ -122,28 +122,28 @@ export const SERVICES = [
 
 export const WHY_US = [
   {
-    icon: "Plug",
-    title: "Integração sem fricção",
+    icon: "Clock",
+    title: "Telerradiologia 24/7",
     description:
-      "A Elo e-Health realiza o diagnóstico de forma personalizada e adaptada para sua realidade. Nenhuma troca de equipamento é necessária.",
+      "Conectamos sua operação a médicos sub-especialistas através da telerradiologia. Garanta laudos ágeis, precisos e ininterruptos em qualquer dia ou horário, eliminando gargalos operacionais sem inflar seus custos fixos.",
   },
   {
-    icon: "Users2",
-    title: "Equipe especializada própria",
+    icon: "Zap",
+    title: "Eficiência Operacional Avançada",
     description:
-      "Corpo clínico, técnicos e suporte próprio com protocolos rigorosos seguidos do início ao fim.",
+      "Eliminamos gargalos e ociosidade no seu parque tecnológico. Conectamos técnicos experientes remotamente às suas máquinas para ampliar a oferta de exames da sua clínica, otimizar a produtividade e zerar o desperdício.",
   },
   {
-    icon: "TrendingDown",
-    title: "Redução real de custos",
+    icon: "Stethoscope",
+    title: "Corpo Clínico Especializado",
     description:
-      "Menos ociosidade, mesma estrutura local, mais exames por turno.",
+      "Tenha suporte total à tomada de decisão com um corpo médico altamente qualificado. Entregamos agilidade e segurança diagnóstica contínua para sua equipe, reduzindo drasticamente as taxas de reconvocação de pacientes.",
   },
   {
-    icon: "Award",
-    title: "Qualidade mensurável",
+    icon: "LineChart",
+    title: "Foco na Lucratividade e Governança",
     description:
-      "Imagens mais nítidas, laudos mais assertivos, mais pacientes satisfeitos.",
+      "Decisões baseadas em dados reais. Transformamos sua operação técnica em um negócio previsível e rentável. Implementamos processos inteligentes e metodologias ágeis que tiram sua liderança do modo reativo e garantem um crescimento estruturado e sólido.",
   },
 ];
 

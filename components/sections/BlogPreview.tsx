@@ -19,10 +19,11 @@ export function BlogPreview() {
           <div>
             <SectionTag className="mb-4">Blog</SectionTag>
             <h2 className="text-3xl sm:text-4xl font-bold text-[#003A6B] font-[var(--font-plus-jakarta)]">
-              Blog Elo e-Health:{" "}
-              <span className="text-[#0070B3]">Seu Guia</span>{" "}
-              para Telerradiologia
+              Blog <span className="text-[#0070B3]">Elo e-Health</span>
             </h2>
+            <p className="text-[#878787] text-lg mt-3 max-w-2xl">
+              Insights e tendências para líderes da saúde.
+            </p>
           </div>
           <Button
             href="/blog"

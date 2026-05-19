@@ -1,13 +1,6 @@
-import { MessageCircle, CalendarCheck, CheckCircle2 } from "lucide-react";
+import { MessageCircle, CalendarCheck } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { WHATSAPP_MESSAGE } from "@/lib/constants";
-
-const CHECKMARKS = [
-  "Implementação em dias",
-  "Suporte técnico dedicado",
-  "Pague por uso",
-  "Cancele sem multa",
-];
 
 export function CtaFinal() {
   return (
@@ -33,24 +26,16 @@ export function CtaFinal() {
 
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-5 text-white font-[var(--font-plus-jakarta)]">
-          Eleve o seu{" "}
-          <span className="text-[#99C1DD]">centro de diagnóstico</span>{" "}
-          com a Elo e-Health.
+          Eleve o{" "}
+          <span className="text-[#99C1DD]">nível de profissionalismo</span>{" "}
+          da sua empresa de saúde com a{" "}
+          <span className="whitespace-nowrap">Elo e&#8209;Health.</span>
         </h2>
 
         <p className="text-white/75 text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
           Fale com um especialista e descubra como reduzir custos, eliminar filas
           e atender mais pacientes.
         </p>
-
-        <ul className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 mb-10" role="list">
-          {CHECKMARKS.map((item) => (
-            <li key={item} className="flex items-center gap-2 text-sm text-white/90">
-              <CheckCircle2 size={16} className="text-[#99C1DD] flex-shrink-0" aria-hidden="true" />
-              {item}
-            </li>
-          ))}
-        </ul>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Button

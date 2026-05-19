@@ -1,4 +1,4 @@
-import { TrendingUp, DollarSign, Star } from "lucide-react";
+import { TrendingUp, DollarSign, Gauge } from "lucide-react";
 import { SectionTag } from "@/components/ui/SectionTag";
 
 const BENEFITS = [
@@ -6,19 +6,19 @@ const BENEFITS = [
     icon: TrendingUp,
     title: "Receita ampliada",
     description:
-      "Mais exames por turno, horários flexíveis e serviços diagnósticos que antes eram inviáveis operacionalmente.",
+      "Mais exames por turno e mais serviços de diagnóstico que antes eram inviáveis operacionalmente.",
   },
   {
     icon: DollarSign,
-    title: "Custos sob controle",
+    title: "Redução de custos operacionais",
     description:
-      "Redução de ociosidade, menos infraestrutura física e operação otimizada com protocolos revisados continuamente.",
+      "Maior eficiência operacional através de gestão profissional, redução de ociosidade de equipamentos, menos estrutura física e operação otimizada.",
   },
   {
-    icon: Star,
-    title: "Reputação e satisfação",
+    icon: Gauge,
+    title: "Controle da operação",
     description:
-      "Imagens de maior qualidade, laudos mais assertivos e pacientes que recomendam. O diagnóstico vira diferencial competitivo.",
+      "Maior controle da sua operação de saúde através da implementação de processos e tecnologia que fornecem dados estruturados para melhor tomada de decisão gerencial.",
   },
 ];
 

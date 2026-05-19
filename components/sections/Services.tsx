@@ -75,10 +75,10 @@ export function Services() {
           <SectionTag dark className="mb-4">Nossos Serviços</SectionTag>
           <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-white font-[var(--font-plus-jakarta)]">
             Soluções completas em{" "}
-            <span className="text-[#7DD3F8]">saúde e diagnóstico</span>
+            <span className="text-[#7DD3F8]">serviços, tecnologia e educação</span>
           </h2>
           <p className="text-white/60 text-lg max-w-2xl mx-auto">
-            Qualidade, confiança e agilidade em diagnósticos por imagem, consultoria e dados.
+            Para operações de saúde que querem criar um futuro mais eficiente e conectado.
           </p>
         </div>
 
