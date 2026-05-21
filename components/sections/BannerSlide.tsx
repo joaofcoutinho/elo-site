@@ -5,6 +5,7 @@ import Image from "next/image";
 
 type Banner = {
   src: string;
+  mobileSrc?: string;
   alt: string;
   title?: string;
   subtitle?: string;
@@ -14,6 +15,7 @@ type Banner = {
 const BANNERS: Banner[] = [
   {
     src: "/banners/banner-1-novo.png",
+    mobileSrc: "/banners/banner-1-mobile.png",
     alt: "Elo e-Health — Serviços, Tecnologia e Educação",
     title: "Serviços, Tecnologia e Educação",
     subtitle: "para médicos e gestores de clínicas e hospitais",
@@ -21,6 +23,7 @@ const BANNERS: Banner[] = [
   },
   {
     src: "/banners/banner-2-novo.png",
+    mobileSrc: "/banners/banner-2-mobile.png",
     alt: "Elo RDI — telerradiologia com inteligência artificial",
     title: "Elo RDI",
     subtitle:
@@ -29,6 +32,7 @@ const BANNERS: Banner[] = [
   },
   {
     src: "/banners/banner-3-novo.png",
+    mobileSrc: "/banners/banner-3-mobile.png",
     alt: "Elo Education — escola de negócios para médicos e gestores",
     title: "Elo Education",
     subtitle:
@@ -49,33 +53,41 @@ export function BannerSlide() {
 
   return (
     <section aria-label="Banner" className="relative w-full overflow-hidden pt-[65px]">
-      <div className="relative w-full min-h-[460px] sm:min-h-0 sm:aspect-[16/7] lg:aspect-[16/5]">
+      <div className="relative w-full aspect-[3/4] sm:aspect-[16/7] lg:aspect-[16/5]">
         {BANNERS.map((banner, i) => (
           <div
             key={banner.src}
             className="absolute inset-0 transition-opacity duration-700"
             style={{ opacity: i === current ? 1 : 0, zIndex: i === current ? 1 : 0 }}
           >
+            {/* Mobile image (text on top, photo below) */}
+            <Image
+              src={banner.mobileSrc ?? banner.src}
+              alt={banner.alt}
+              fill
+              className="object-cover sm:hidden"
+              priority={i === 0}
+              sizes="100vw"
+            />
+            {/* Desktop / tablet image */}
             <Image
               src={banner.src}
               alt={banner.alt}
               fill
-              className="object-cover"
+              className="object-cover hidden sm:block"
               priority={i === 0}
               sizes="100vw"
             />
 
             {(banner.title || banner.subtitle) && (
               <>
-                {/* Mobile readability gradient — strong fade for text contrast */}
+                {/* Mobile readability gradient — fades from top */}
                 <div
                   className="absolute inset-0 pointer-events-none sm:hidden"
                   aria-hidden="true"
                   style={{
                     background:
-                      banner.align === "right"
-                        ? "linear-gradient(to left, rgba(0,30,60,0.85) 0%, rgba(0,30,60,0.65) 50%, rgba(0,30,60,0.3) 100%)"
-                        : "linear-gradient(to right, rgba(0,30,60,0.85) 0%, rgba(0,30,60,0.6) 55%, rgba(0,30,60,0.2) 100%)",
+                      "linear-gradient(to bottom, rgba(0,30,60,0.55) 0%, rgba(0,30,60,0.2) 36%, transparent 56%)",
                   }}
                 />
                 {/* Desktop subtle gradient on text side */}
@@ -90,11 +102,11 @@ export function BannerSlide() {
                   }}
                 />
 
-                <div className="absolute inset-0 flex items-center pb-10 sm:pb-0">
-                  <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 w-full flex">
+                <div className="absolute inset-x-0 top-0 h-[40%] flex items-center justify-center sm:inset-0 sm:h-full sm:justify-start">
+                  <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 w-full flex justify-center sm:justify-start">
                     <div
-                      className={`max-w-[92%] sm:max-w-lg lg:max-w-xl text-white ${
-                        banner.align === "right" ? "ml-auto sm:text-right" : ""
+                      className={`max-w-[88%] text-center sm:max-w-lg sm:text-left lg:max-w-xl text-white ${
+                        banner.align === "right" ? "sm:ml-auto sm:text-right" : ""
                       }`}
                     >
                       {banner.title && (
